@@ -1,16 +1,16 @@
 %define	api	2
 %define	major	0
 %define	libname	%mklibname %{name} %{api} %{major}
-%define	develname %mklibname -d %{name}
+%define	devname %mklibname -d %{name}
 
 Summary:	MATE virtual file-system libraries
 Name:		mate-vfs
-Version:	1.2.1
+Version:	1.4.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/GNOME
 URL:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
@@ -46,13 +46,13 @@ Group:		System/Libraries
 %description -n %{libname}
 This package contains the library for %{name}.
 
-%package -n %{develname}
+%package -n %{devname}
 Summary:	Development Library and include files for %{name}
 Group:		Development/GNOME and GTK+
 Provides:	%{name}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 
-%description -n %{develname}
+%description -n %{devname}
 This package includes libraries and header files for developing
 MATE VFS applications.
 
@@ -92,7 +92,7 @@ NOCONFIGURE=yes ./autogen.sh
 %files -n %{libname}
 %{_libdir}/libmatevfs-%{api}.so.%{major}*
 
-%files -n %{develname}
+%files -n %{devname}
 %doc ChangeLog
 %doc %{_datadir}/gtk-doc/html/*
 %dir %{_includedir}/mate-vfs-2.0
