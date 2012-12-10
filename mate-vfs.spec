@@ -103,3 +103,14 @@ NOCONFIGURE=yes ./autogen.sh
 %{_libdir}/%{name}-2.0/include
 %{_libdir}/pkgconfig/*.pc
 
+
+
+%changelog
+* Fri Jul 27 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.4.0-1
++ Revision: 811346
+- new version 1.4.0
+
+* Thu May 31 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.1-1
++ Revision: 801584
+- imported package mate-vfs
+
